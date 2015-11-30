@@ -6,24 +6,24 @@
  * Time: 上午12:10
  */
 
-namespace chocoboxxf\yunpian\tests;
+namespace chocoboxxf\YunPian\Tests;
 
 use Yii;
 
 class YunPianSmsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @expectedException \chocoboxxf\yunpian\YunPianException
+     * @expectedException \chocoboxxf\YunPian\YunPianException
      */
-    public function testSendSms()
+    public function testSend()
     {
         $mobile = '12345678901';
         $message = '短信模板内容';
 
         $yunPianSms = Yii::createObject([
-            'class' => 'chocoboxxf\yunpian\YunPianSms',
+            'class' => 'chocoboxxf\YunPian\YunPianSms',
             'apiKey' => '请输入apikey',
         ]);
-        $yunPianSms->sendSms($mobile, $message);
+        $yunPianSms->send($mobile, $message);
     }
 }

@@ -5,7 +5,7 @@
  * Date: 15/11/28
  * Time: 上午10:35
  */
-namespace chocoboxxf\yunpian;
+namespace chocoboxxf\YunPian;
 
 class YunPianException extends \Exception
 {

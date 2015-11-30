@@ -6,12 +6,12 @@
  * Time: 下午11:32
  */
 
-namespace chocoboxxf\yunpian;
+namespace chocoboxxf\YunPian;
 
 use Yii;
 use yii\base\Component;
-use GuzzleHttp\Client;
 use yii\base\InvalidConfigException;
+use GuzzleHttp\Client;
 
 class YunPian extends Component
 {

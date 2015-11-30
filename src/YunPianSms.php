@@ -5,7 +5,7 @@
  * Date: 15/11/27
  * Time: 下午10:54
  */
-namespace chocoboxxf\yunpian;
+namespace chocoboxxf\YunPian;
 
 use Yii;
 
@@ -18,7 +18,7 @@ class YunPianSms extends YunPian
         parent::init();
     }
 
-    public function sendSms($mobile, $text)
+    public function send($mobile, $text)
     {
         $response = $this->apiClient->post(
             YunPianSms::PATH_SEND_SMS,

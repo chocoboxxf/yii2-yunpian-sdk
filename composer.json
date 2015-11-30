@@ -28,12 +28,12 @@
   },
   "autoload": {
     "psr-4": {
-      "chocoboxxf\\yunpian\\": "src/"
+      "chocoboxxf\\YunPian\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "chocoboxxf\\yunpian\\tests\\": "tests/"
+      "chocoboxxf\\YunPian\\Tests\\": "tests/"
     }
   }
 }
