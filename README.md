@@ -30,7 +30,7 @@
   .....
   'Sms' => [ // 
     'class' => 'chocoboxxf/YunPian/YunPianSms',
-    'appKey' => '云片网络的APIKEY',
+    'apiKey' => '云片网络的APIKEY',
   ]
   ....
 ]
@@ -47,7 +47,7 @@ try {
 // 局部调用
 $sms = Yii::createObject([
     'class' => 'chocoboxxf/YunPian/YunPianSms',
-    'appKey' => '云片网络的APIKEY',
+    'apiKey' => '云片网络的APIKEY',
 ]);
 try {
     $result = $sms->send('手机号', '短信内容');
