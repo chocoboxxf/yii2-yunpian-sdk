@@ -1,7 +1,7 @@
 <?php
 /**
  * 云片短信API测试
- * User: chocobo
+ * User: chocoboxxf
  * Date: 15/11/28
  * Time: 上午12:10
  */

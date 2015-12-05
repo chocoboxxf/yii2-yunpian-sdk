@@ -29,7 +29,7 @@
 'components' => [
   .....
   'Sms' => [ // 
-    'class' => 'chocoboxxf/YunPian/YunPianSms',
+    'class' => 'chocoboxxf\YunPian\YunPianSms',
     'apiKey' => '云片网络的APIKEY',
   ]
   ....
@@ -46,7 +46,7 @@ try {
 
 // 局部调用
 $sms = Yii::createObject([
-    'class' => 'chocoboxxf/YunPian/YunPianSms',
+    'class' => 'chocoboxxf\YunPian\YunPianSms',
     'apiKey' => '云片网络的APIKEY',
 ]);
 try {

@@ -1,7 +1,7 @@
 <?php
 /**
  * 云片API基类
- * User: chocobo
+ * User: chocoboxxf
  * Date: 15/11/27
  * Time: 下午11:32
  */

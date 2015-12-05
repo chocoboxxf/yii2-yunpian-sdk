@@ -1,7 +1,7 @@
 <?php
 /**
  * 云片短信API
- * User: chocobo
+ * User: chocoboxxf
  * Date: 15/11/27
  * Time: 下午10:54
  */
@@ -36,7 +36,6 @@ class YunPianSms extends YunPian
         }
         // 错误情况
         $message = $this->getError($result['code']);
-        Yii::error($message);
         throw new YunPianException(
             $message,
             $result['code'],
