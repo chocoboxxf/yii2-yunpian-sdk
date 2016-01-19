@@ -28,7 +28,7 @@
 // 在config/main.php配置文件中定义component配置信息
 'components' => [
   .....
-  'sms' => [ // 
+  'sms' => [
       'class' => 'chocoboxxf\YunPian\YunPianSms',
       'apiKey' => '云片网络的APIKEY',
   ]
