@@ -5,6 +5,7 @@
 --------
 - >= PHP 5.4
 - >= Yii 2.0
+- >= GuzzleHttp 5.0
 
 安装
 ----
@@ -19,22 +20,41 @@
 }
 ```
 
-使用示例
+设置方法
 --------
 
-短信 API
 ```php
 // 全局使用
 // 在config/main.php配置文件中定义component配置信息
 'components' => [
   .....
-  'Sms' => [ // 
-    'class' => 'chocoboxxf\YunPian\YunPianSms',
-    'apiKey' => '云片网络的APIKEY',
+  'sms' => [ // 
+      'class' => 'chocoboxxf\YunPian\YunPianSms',
+      'apiKey' => '云片网络的APIKEY',
   ]
   ....
 ]
 // 代码中调用
+$result = Yii::$app->sms->send('手机号', '短信内容');
+....
+```
+
+```php
+// 局部调用
+$sms = Yii::createObject([
+    'class' => 'chocoboxxf\YunPian\YunPianSms',
+    'apiKey' => '云片网络的APIKEY',
+]);
+$result = $sms->send('手机号', '短信内容');
+....
+```
+
+使用示例
+--------
+
+发送短信
+
+```php
 try {
     $result = Yii::$app->Sms->send('手机号', '短信内容');
 } catch (\chocoboxxf\YunPian\YunPianException $ex) {
@@ -42,20 +62,4 @@ try {
     $message = $ex->getMessage(); // 错误信息
     $detail = $ex->getDetail(); // 错误详细信息
 }
-....
-
-// 局部调用
-$sms = Yii::createObject([
-    'class' => 'chocoboxxf\YunPian\YunPianSms',
-    'apiKey' => '云片网络的APIKEY',
-]);
-try {
-    $result = $sms->send('手机号', '短信内容');
-} catch (\chocoboxxf\YunPian\YunPianException $ex) {
-    $code  = $ex->getCode(); // 错误码
-    $message = $ex->getMessage(); // 错误信息
-    $detail = $ex->getDetail(); // 错误详细信息
-}
-....
-
 ```
